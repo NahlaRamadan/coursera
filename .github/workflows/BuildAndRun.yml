@@ -7,7 +7,7 @@ on:
 jobs:
   Build-run:
     name: build and run the js test project
-    runs-on: mac-latest
+    runs-on: windows-latest
     
     steps:
     - run: brew install node
