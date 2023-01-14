@@ -17,6 +17,6 @@ jobs:
 
     - name: Checkout the code from Github repo 
       uses: actions/checkout@v3
-    - run:  node index.js
+    - run:  node index.html
       name: run JS project using Node.js
       
