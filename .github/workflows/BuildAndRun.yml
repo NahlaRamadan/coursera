@@ -10,12 +10,11 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - run: brew install node
+    - run: npm install node
       name: Install node.js
     - run: node -v
       name: Check node Installation
-    - run: npm -v
-      name: check npm installation
+
     - name: Checkout the code from Github repo 
       uses: actions/checkout@v3
     - run:  node index.js
