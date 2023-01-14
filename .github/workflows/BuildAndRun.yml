@@ -1,0 +1,23 @@
+name: Build 
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  Build-run:
+    name: build and run the js test project
+    runs-on: mac-latest
+    
+    steps:
+    - run: brew install node
+      name: Install node.js
+    - run: node -v
+      name: Check node Installation
+    - run: npm -v
+      name: check npm installation
+    - name: Checkout the code from Github repo 
+      uses: actions/checkout@v3
+    - run:  node index.js
+      name: run JS project using Node.js
+      
